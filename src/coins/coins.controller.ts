@@ -1,13 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
 import { CoinsService } from './coins.service';
-import { ICoinsData } from '../interfaces/Coins';
+import { Coin } from '@prisma/client';
 
 @Controller('coins')
 export class CoinsController {
   constructor(private readonly coinsService: CoinsService) {}
 
   @Get('data')
-  getData(): ICoinsData[] {
-    return this.coinsService.getData();
+  async getData(): Promise<Coin[]> {
+    return await this.coinsService.getData();
   }
 }
