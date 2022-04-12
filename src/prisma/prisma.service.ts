@@ -7,7 +7,7 @@ export class PrismaService extends PrismaClient {
     super({
       datasources: {
         db: {
-          url: 'postgresql://test:test123@localhost:5434/portfolio-tracker?schema=public',
+          url: process.env.DATABASE_URL,
         },
       },
     });
