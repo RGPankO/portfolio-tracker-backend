@@ -1,18 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { IUserData } from '../interfaces/User';
+import { Portfolio } from '@prisma/client';
+import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class UserService {
-  getData(): IUserData[] {
-    return [
-      {
-        amount: '1.000',
-        symbol: 'BTC',
-      },
-      {
-        amount: '2.000',
-        symbol: 'ETH',
-      },
-    ];
+  constructor(private prisma: PrismaService) {}
+  async getData(): Promise<Portfolio[]> {
+    const portfolio = await this.prisma.portfolio.findMany();
+    return portfolio;
   }
 }
