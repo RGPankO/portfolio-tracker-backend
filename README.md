@@ -53,3 +53,11 @@ $ npx primsa migrate db
 ```
 
 For production update `DATABASE_URL` in `.env` file and migrate local DB.
+
+## Endpoints
+
+`/user/data` - Returns portfolio user data
+
+`/coin/data` - Returns coins data
+
+`/transaction/data` - Returns transactions data
