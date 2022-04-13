@@ -23,3 +23,12 @@ model Coin {
   coingeckoId String
   icon String
 }
+
+model Transaction {
+  id Int @id @default(autoincrement())
+  type String
+  currentPriceUSD String
+  symbol String
+  userId String
+  amount String
+}
