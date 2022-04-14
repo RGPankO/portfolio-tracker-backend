@@ -61,3 +61,10 @@ For production update `DATABASE_URL` in `.env` file and migrate local DB.
 `/coin/data` - Returns coins data
 
 `/transaction/data` - Returns transactions data
+
+## Things to be finished:
+
+- [ ] Migrate users from Firebase and create `user` table with registered user
+- [ ] Current users table needs to be renamed to portfolio
+- [ ] Relations between `users` <-> `portfolio` <-> `coins` <-> `transactions`
+- [ ] Migrate db from Postgre to MySQL
