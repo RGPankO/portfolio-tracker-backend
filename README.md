@@ -8,6 +8,8 @@ Backend is build by [Nest](https://github.com/nestjs/nest) framework TypeScript 
 
 ## Installation
 
+Node version: `16.14.2`
+
 ```bash
 $ npm install
 
@@ -65,6 +67,8 @@ For production update `DATABASE_URL` in `.env` file and migrate local DB.
 ## Things to be finished:
 
 - [ ] Migrate users from Firebase and create `user` table with registered user
-- [ ] Current users table needs to be renamed to portfolio
+- [ ] Current users table needs to be renamed to portfolio (endpoint & services as well)
 - [ ] Relations between `users` <-> `portfolio` <-> `coins` <-> `transactions`
+- [ ] Implement Coingecko price service to calculate token prices for each user/portfolio
 - [ ] Migrate db from Postgre to MySQL
+- [ ] Build proper CI/CD pipeline
