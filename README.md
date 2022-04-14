@@ -43,13 +43,13 @@ $ docker compose up dev-db -d
 To run Prisma studio
 
 ```bash
-$ npx primsa studio
+$ npx prisma studio
 ```
 
 To run migrations
 
 ```bash
-$ npx primsa migrate db
+$ npx prisma migrate db
 ```
 
 For production update `DATABASE_URL` in `.env` file and migrate local DB.
